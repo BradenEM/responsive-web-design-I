@@ -310,6 +310,18 @@ p {
   margin-bottom: 30px;
 }
 
+@media (max-width: 800px) {
+  div.upper-half div.top {
+    margin: 2%;
+  }
+  .top-right {
+    margin: 2%;
+  }
+  .bottom {
+    margin: 2%;
+  }
+}
+
 .bottom-half {
   display: flex;
 }
