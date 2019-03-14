@@ -137,6 +137,7 @@ html,
 body {
   height: 100%;
   font-family: "Titillium Web", sans-serif;
+  width: 100%;
 }
 
 h1,
@@ -156,6 +157,13 @@ body {
   width: 1000px;
 }
 
+@media (max-width: 800px) {
+  body {
+    margin: 15px;
+    width: 96%;
+  }
+}
+
 .first,
 .second,
 .third,
@@ -173,8 +181,23 @@ header {
   justify-content: center;
 }
 
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
 header nav {
   display: flex;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .shout {
@@ -191,11 +214,33 @@ header nav {
   height: 480px;
 }
 
+@media (max-width: 800px) {
+  .round {
+    display: none;
+  }
+  .under-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  div section h1 {
+    font-size: 90px;
+  }
+}
+
 .get-started {
   background-color: white;
   border: 1px solid black;
   width: 150px;
   height: 30px;
+}
+
+@media (max-width: 800px) {
+  .get-started {
+    width: 170px;
+    height: 35px;
+    font-size: 20px;
+  }
 }
 
 .logo {
@@ -223,12 +268,30 @@ footer p {
   text-align: center;
 }
 
+@media (max-width: 800px) {
+  .copyright {
+    width: 100%;
+  }
+}
+
 .middle-img {
   width: 1000px;
 }
 
+@media (max-width: 800px) {
+  .middle-img {
+    width: 100%;
+  }
+}
+
 .mid-info {
   border-bottom: solid 2px black;
+}
+
+@media (max-width: 800px) {
+  .mid-info {
+    width: 100%;
+  }
 }
 
 p {
@@ -334,4 +397,3 @@ li {
   text-align: justify;
   width: 90%;
 }
-
