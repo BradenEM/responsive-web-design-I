@@ -1,3 +1,554 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body {
+  margin: auto;
+  width: 1000px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    width: 95%;
+  }
+  section.copyright {
+    width: 100%;
+  }
+  img.middle-img {
+    width: 100%;
+  }
+  body header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 15px;
+    width: 96%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 15px;
+    width: 95%;
+  }
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth {
+  margin: 20px;
+  text-decoration: none;
+  color: gray;
+  padding: 10px;
+}
+
+@media (max-width: 500px) {
+  .first,
+  .second,
+  .third,
+  .fourth,
+  .fifth,
+  .sixth {
+    width: 100%;
+    border-bottom: 1px gray solid;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    color: gray;
+    padding: 10px;
+  }
+  nav a.first {
+    margin-top: 15px;
+    border-top: 1px gray solid;
+  }
+  nav a.sixth {
+    margin-bottom: 15px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+header nav {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  img.logo {
+    margin: 0;
+  }
+}
+
+.shout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.under-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: solid 2px black;
+  height: 480px;
+}
+
+@media (max-width: 800px) {
+  .round {
+    display: none;
+  }
+  .under-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  div section h1 {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .round {
+    display: none;
+  }
+  .under-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  div section h1 {
+    font-size: 50px;
+  }
+}
+
+.get-started {
+  background-color: white;
+  border: 1px solid black;
+  width: 150px;
+  height: 30px;
+}
+
+@media (max-width: 800px) {
+  .get-started {
+    width: 170px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .get-started {
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+.logo {
+  margin-top: 20px;
+  margin-left: 35px;
+  width: 183px;
+  height: 36px;
+}
+
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+footer p {
+  margin: 10px 0 10px 0;
+}
+
+.copyright {
+  width: 1000px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .copyright {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .copyright {
+    width: 100%;
+  }
+}
+
+.middle-img {
+  width: 1000px;
+}
+
+@media (max-width: 800px) {
+  .middle-img {
+    width: 100%;
+  }
+}
+
+.mid-info {
+  border-bottom: solid 2px black;
+}
+
+@media (max-width: 800px) {
+  .mid-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .mid-info {
+    width: 100%;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+.upper-half {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .upper-half {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  div.upper-half div.top {
+    margin: 2%;
+  }
+  .top-right {
+    margin: 2%;
+  }
+  .bottom {
+    margin: 2%;
+  }
+}
+
+@media (max-width: 500px) {
+  div.upper-half div.top {
+    width: 100%;
+    margin: 1%;
+    margin-top: 30px;
+  }
+  .top-right {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.bottom-half {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .bottom-half {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.bottom {
+    width: 100%;
+  }
+  .bottom.top {
+    margin-bottom: 15px;
+  }
+  .bottom.middle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .bottom.lowest {
+    margin-top: 15px;
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.services-header-img {
+  width: 1000px;
+}
+
+.services-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid black 1px;
+}
+
+.services-title {
+  font-size: 22px;
+}
+
+.middle-services {
+  display: flex;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  border-bottom: solid black 2px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  width: auto;
+}
+
+div.box {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  width: 450px;
+  padding: 15px;
+  margin: 20px;
+  height: 225px;
+  border: 1px solid black;
+  text-align: justify;
+}
+
+.learn-more {
+  background-color: whitesmoke;
+  width: 30%;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.bottom-services {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 10px;
+}
+
+.facts {
+  text-align: justify;
+  width: 90%;
+}
